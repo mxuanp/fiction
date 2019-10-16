@@ -21,9 +21,9 @@
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
         <property name="jdbcUrl"
-                  value="jdbc:mysql://localhost/test?characterEncoding=utf8&amp;serverTimezone=UTC"></property>
-        <property name="user" value="root"></property>
-        <property name="password" value="root"></property>
+                  value="jdbc:mysql://localhost:3306/site?characterEncoding=utf8&amp;serverTimezone=UTC"></property>
+        <property name="user" value="ayako"></property>
+        <property name="password" value="123321"></property>
         <property name="minPoolSize" value="1"></property>
         <property name="maxPoolSize" value="5"></property>
         <property name="initialPoolSize" value="1"></property>
@@ -53,7 +53,7 @@
 
     <!-- 扫描生成所有dao层 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.bigname.demo03.dao"></property>
+        <property name="basePackage" value="life.yaya.dao"></property>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
 </beans>
