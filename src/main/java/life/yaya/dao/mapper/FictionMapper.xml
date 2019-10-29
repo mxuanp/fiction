@@ -4,14 +4,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="life.yaya.dao.FictionDao">
     <select id="selectAllFictions" resultType="life.yaya.po.Fiction">
-        select * from fiction_fiction;
+        select * from fiction
     </select>
 
     <select id="selectFictionByFilter" resultType="life.yaya.po.Fiction" parameterType="String">
-        select * from fiction_fiction where name like concat('%',#{filter},'%') or author like concat('%',#{filter},'%')
+        select * from fiction where name like concat('%',#{filter},'%') or author like concat('%',#{filter},'%')
     </select>
 
     <select id="selectFictionById" parameterType="Integer" resultType="life.yaya.po.Fiction">
-        select * from fiction_fiction where id={#id}
+        select * from fiction where id=#{id}
     </select>
 </mapper>

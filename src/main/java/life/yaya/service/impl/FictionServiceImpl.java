@@ -81,8 +81,7 @@ public class FictionServiceImpl implements FictionService {
      * @return
      */
     @Override
-    public Fiction getFictionById(Integer id) throws IOException {
-        Runtime.getRuntime().exec(new String[]{"python3", "update.py", String.valueOf(id)});
+    public Fiction getFictionById(Integer id){
         return fictionDao.selectFictionById(id);
     }
 

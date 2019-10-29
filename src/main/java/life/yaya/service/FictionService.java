@@ -47,7 +47,7 @@ public interface FictionService {
      * @param id
      * @return
      */
-    public Fiction getFictionById(Integer id) throws IOException;
+    public Fiction getFictionById(Integer id);
 
     /**
      * get chapters of the fiction

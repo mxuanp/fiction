@@ -1,5 +1,6 @@
 package life.yaya.po;
 
+
 public class Fiction {
     private Integer id;
     private String name;
@@ -8,8 +9,8 @@ public class Fiction {
     private String image;
     private String author;
     private Integer num;
-    
     private Integer updating;
+
 
     public Integer getId() {
         return id;
@@ -74,4 +75,6 @@ public class Fiction {
     public void setUpdating(Integer updating) {
         this.updating = updating;
     }
+
+
 }

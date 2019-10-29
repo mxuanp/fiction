@@ -79,7 +79,8 @@ public class FictionController {
      */
     @RequestMapping(value = "/info", produces = "application/json;charset=utf-8")
     @ResponseBody
-    public Fiction info(HttpServletRequest req) throws IOException {
+    public Fiction info(HttpServletRequest req) {
+        System.out.println(req.getParameter("id"));
         return fictionService.getFictionById(Integer.valueOf(req.getParameter("id")));
     }
 
